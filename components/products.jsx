@@ -1,16 +1,18 @@
 import React from "react";
-import CustomCard from "./customCard";
+import ProductCard from "./productCard";
 
-const Products = () => {
+const Products = async () => {
+  const response = await fetch("https://dummyjson.com/products?limit=12");
+  const products = await response.json();
   return (
     <div className="mx-auto w-[calc(100vw-120px)]">
-      <div className="flex gap-8 ">
+      <div className="flex gap-8 py-8">
         <p>latest product</p>
         <p>all products</p>
       </div>
       <div className="flex gap-4 py-8 justify-center flex-wrap ">
-        {[1, 2, 3, 4, 5, 6, 7, 8].map((item) => (
-          <CustomCard key={item} title="product title" />
+        {products?.products?.map((product) => (
+          <ProductCard key={product?.id} product={product} />
         ))}
       </div>
     </div>
