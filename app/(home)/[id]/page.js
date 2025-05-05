@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import ProductInfo from "./components/productInfo.jsx";
 const Page = async ({ params }) => {
   const { id } = await params;
   const response = await fetch("https://dummyjson.com/products");
@@ -8,7 +9,7 @@ const Page = async ({ params }) => {
     (product) => product.id === Number(id)
   );
   return (
-    <div className="mx-auto w-[calc(100vw-120px)] flex">
+    <div className="mx-auto w-[calc(100vw-120px)] flex py-4 gap-6">
       <div className=" w-1/3 h-1/2">
         <Image
           className="object-cover shadow-sm rounded-md"
@@ -31,8 +32,7 @@ const Page = async ({ params }) => {
         </div>
       </div>
       <div className="flex-1">
-        <h1>{product?.title}</h1>
-        <p className="text-sm text-gray-500">{product?.description}</p>
+        <ProductInfo product={product} />
       </div>
     </div>
   );
