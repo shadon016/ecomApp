@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 import ProductCard from "./productCard";
 
 const Products = async () => {
@@ -12,7 +13,9 @@ const Products = async () => {
       </div>
       <div className="flex gap-4 py-8 justify-center flex-wrap ">
         {products?.products?.map((product) => (
-          <ProductCard key={product?.id} product={product} />
+          <Link href={`/${product.id}`} key={product?.id}>
+            <ProductCard product={product} />
+          </Link>
         ))}
       </div>
     </div>
