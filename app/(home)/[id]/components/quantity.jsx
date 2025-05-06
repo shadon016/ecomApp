@@ -1,9 +1,7 @@
 "use client";
 import React from "react";
-import { useState } from "react";
 
-const Quantity = () => {
-  const [quantity, setQuantity] = useState(1);
+const Quantity = ({ quantity, setQuantity }) => {
   return (
     <div className="shadow-sm rounded-md w-fit">
       <button

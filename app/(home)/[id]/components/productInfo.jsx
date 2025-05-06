@@ -1,5 +1,5 @@
 import React from "react";
-import Quantity from "./quantity";
+
 import AddCart from "./addcart";
 
 const ProductInfo = ({ product }) => {
@@ -10,9 +10,8 @@ const ProductInfo = ({ product }) => {
       <p>
         <span className="text-gray-500">Price:</span> ${product?.price}
       </p>
-      <div className="flex gap-4 items-center">
-        <Quantity />
-        <AddCart />
+      <div className="">
+        <AddCart product={product} />
       </div>
     </div>
   );
