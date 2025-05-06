@@ -7,7 +7,6 @@ import Quantity from "./quantity";
 const Addcart = ({ product }) => {
   const [quantity, setQuantity] = useState(1);
 
-  console.log(product, quantity);
   return (
     <div className="flex gap-4 items-center">
       <Quantity quantity={quantity} setQuantity={setQuantity} />
