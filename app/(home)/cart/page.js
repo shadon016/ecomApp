@@ -1,7 +1,11 @@
-import React from "react";
-
+import CartItem from "./components/cartItem.jsx";
 const Page = () => {
-  return <div>cart page</div>;
+  return (
+    <div>
+      <p>cart page</p>
+      <CartItem />
+    </div>
+  );
 };
 
 export default Page;

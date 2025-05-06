@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { ShoppingBasket } from "lucide-react";
+import Length from "../app/(home)/cart/components/length.jsx";
 const Nav = () => {
   return (
     <nav className=" p-4 bg-gray-800  text-white">
@@ -10,6 +11,9 @@ const Nav = () => {
         <ul className="flex space-x-4">
           <Link href="/cart">
             <ShoppingBasket />
+            <span className="ml-2">
+              <Length />
+            </span>
           </Link>
         </ul>
       </div>
