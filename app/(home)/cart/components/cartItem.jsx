@@ -9,13 +9,20 @@ const CartItem = () => {
     0
   );
   return (
-    <div>
+    <div className="flex flex-col gap-4">
       {cart?.map((item) => (
-        <div key={item.id} className="flex gap-4 items-center">
-          <div>
+        <div
+          key={item.id}
+          className="flex gap-4 items-center bg-red-400 w-1/4 "
+        >
+          <div className="">
             <h2>{item.title}</h2>
-            <p>{item.price}</p>
+            <p>price ${item.price}</p>
             <p>Quantity: {item.quantity}</p>
+          </div>
+          <div className="flex gap-2">
+            
+
           </div>
         </div>
       ))}

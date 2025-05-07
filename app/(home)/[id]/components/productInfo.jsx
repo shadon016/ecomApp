@@ -10,6 +10,7 @@ const ProductInfo = ({ product }) => {
       <p>
         <span className="text-gray-500">Price:</span> ${product?.price}
       </p>
+
       <div className="">
         <AddCart product={product} />
       </div>
