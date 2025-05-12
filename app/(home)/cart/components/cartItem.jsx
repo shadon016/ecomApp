@@ -1,6 +1,7 @@
 "use client";
 import React, { useContext } from "react";
 import { cartContext } from "../../../context/context.js";
+import Price from "./price.jsx";
 
 const CartItem = () => {
   const { cart, setCart } = useContext(cartContext);
@@ -29,11 +30,13 @@ const CartItem = () => {
   };
   return (
     <div className="flex flex-col gap-4">
+      {cart.length === 0 && (
+        <div className="flex justify-center items-center h-full">
+          <h1 className="text-2xl">Your cart is empty</h1>
+        </div>
+      )}
       {cart?.map((item) => (
-        <div
-          key={item.id}
-          className="flex gap-4 items-center bg-red-400 w-1/4 "
-        >
+        <div key={item.id} className="flex gap-4 items-center bg-red-400">
           <div className="">
             <h2>{item.title}</h2>
             <p>price ${item.price}</p>
@@ -46,9 +49,8 @@ const CartItem = () => {
           </div>
         </div>
       ))}
-      <div className="flex gap-2">
-        <h2>Total Price:</h2>
-        <p>{totalPrice}</p>
+      <div className="">
+        {cart.length > 0 && <Price totalPrice={totalPrice} />}
       </div>
     </div>
   );

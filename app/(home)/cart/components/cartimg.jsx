@@ -2,7 +2,7 @@ import React from "react";
 
 const Cartimg = ({ props }) => {
   return (
-    <div className="flex items-center justify-center h-48">
+    <div className="flex items-center justify-center h-full p-8">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 888 741.04834"
@@ -11,6 +11,7 @@ const Cartimg = ({ props }) => {
         artist="Katerina Limpitsouni"
         source="https://undraw.co/"
         {...props}
+        className="w-full h-full"
       >
         <path
           d="M521.89611,253.85607H517.8642v-110.453a63.92718,63.92718,0,0,0-63.92738-63.92726H219.92738A63.92718,63.92718,0,0,0,156,143.40309V749.35675A63.92719,63.92719,0,0,0,219.92738,813.284H453.93682a63.92719,63.92719,0,0,0,63.92738-63.92726V332.47837h4.03191Z"
