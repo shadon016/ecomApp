@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import ProductCard from "./productCard";
+import Viewall from "../app/(home)/products/components/viewall";
 
 const Products = async ({ products }) => {
   return (
@@ -13,12 +14,7 @@ const Products = async ({ products }) => {
         ))}
       </div>
       <div className="flex justify-center py-8">
-        <Link
-          href="/products"
-          className="px-6 py-1 shadow-md bg-gray-200 rounded-md"
-        >
-          view all
-        </Link>
+        <Viewall />
       </div>
     </div>
   );
