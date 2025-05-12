@@ -6,7 +6,7 @@ const Page = () => {
       <div className="flex-1">
         <Cartimg />
       </div>
-      <div className="flex-1 overflow-y-scroll">
+      <div className="flex-1 overflow-y-scroll relative">
         <CartItem />
       </div>
     </div>
