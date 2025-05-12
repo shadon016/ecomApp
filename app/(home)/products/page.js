@@ -6,7 +6,7 @@ const Page = async () => {
   const response = await fetch("https://dummyjson.com/products");
   const products = await response.json();
   return (
-    <div className="flex justify-between gap-4">
+    <div className="flex justify-between gap-4 w-[calc(100vw-120px)] mx-auto">
       <div className="">
         <Category products={products} />
       </div>

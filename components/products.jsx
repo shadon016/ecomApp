@@ -5,7 +5,7 @@ import Viewall from "../app/(home)/products/components/viewall";
 
 const Products = async ({ products }) => {
   return (
-    <div className="mx-auto w-[calc(100vw-120px)]">
+    <div className="">
       <div className="flex gap-4 py-8 justify-center flex-wrap ">
         {products?.products?.map((product) => (
           <Link href={`/${product.id}`} key={product?.id}>

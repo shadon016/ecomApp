@@ -9,7 +9,7 @@ const Category = ({ products }) => {
   }, {});
   const categories = Object.keys(grouped);
   return (
-    <div className="sticky top-0">
+    <div className="sticky top-20 right-0 py-7">
       <h1>Category</h1>
       {categories?.map((category, index) => (
         <div key={index}>
