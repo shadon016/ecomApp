@@ -1,5 +1,5 @@
 import React from "react";
-
+import Link from "next/link";
 import {
   Card,
   CardContent,
@@ -24,14 +24,16 @@ const Categories = async () => {
       <h2 className="mx-auto w-[calc(100vw-120px)] py-8 ">choose category</h2>
       <div className="flex gap-4 flex-wrap justify-center ">
         {categories?.map((category, index) => (
-          <Card className="min-w-[18rem]" key={index}>
-            <CardHeader>
-              <CardTitle>{category}</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <p>{grouped[category].length}</p>
-            </CardContent>
-          </Card>
+          <Link href="/products" key={index}>
+            <Card className="min-w-[18rem]">
+              <CardHeader>
+                <CardTitle>{category}</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p>{grouped[category].length}</p>
+              </CardContent>
+            </Card>
+          </Link>
         ))}
       </div>
     </div>
