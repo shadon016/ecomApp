@@ -3,7 +3,7 @@ import Link from "next/link";
 import ProductCard from "./productCard";
 import Viewall from "../app/(home)/products/components/viewall";
 
-const Products = async ({ products }) => {
+const Products = ({ products }) => {
   return (
     <div className="">
       <div className="flex gap-4 py-8 justify-center flex-wrap ">
